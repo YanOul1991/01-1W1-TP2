@@ -1,0 +1,345 @@
+/************************************************************************/
+/************************************************************************/
+/*Style pour la partie header de la page*/
+body{
+    background-image:none;
+    /*background-size: cover; l'image d'arriee-plan est étiré quand j'essaye de faire un size cover et l'image ne se voit plus*/
+}
+
+/*Ceci est le moyen que j'utilise pour avoir une image d'arrière-plan qui ne reste fixe sur toute la page*/
+#arrierPlan{
+    background-image: url(images/arrierPlanPage.jpg);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -5;
+}
+
+/* La dive global aura une largeur 100vw et 100vh pour qu'elle prenndent toute la taille et la largeur de la page.
+de plus la page sera en display flex column pour que toutes les sections soient un par dessus*/
+#global{
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: center;
+}
+
+/*Header fera toute la largeur de la page et ses elements sera en colonnes*/
+header{
+    width: 100vw;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-content: center;
+    background-color: rgb(155, 15, 15);
+    padding-top: 100px;
+}
+
+/*modification de la police du titre principal, sa taille et sa couleur. Modification de sa position pour qu'il soit au centre de le page web*/
+header h1 {
+    color: white;
+    position: absolute;
+    text-align: center;
+    width: 50%;
+    left: 25%;
+    font-family: Bahnschrift, Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 4em;
+    margin-top: 0px;
+}
+
+/*modification de la taille du logo*/
+header img{
+    width: 110px;
+    position: relative;
+    left: 20px;
+    bottom: 25px;
+}
+
+
+/*le conteneur de la navigation fera toute la largeur de la page et aura un position fixed pour qu'il soit tout le temps a porte de l'utilisateur*/
+nav{
+    width: 100vw;
+    display: flex;
+    flex-flow: row wrap;
+    position: fixed;
+    top: 0;
+    justify-content: space-evenly;
+    padding: 5px;
+    background-color: rgba(236, 15, 15, 0.822);
+    z-index: 10;
+}
+
+/*modification de la couleur et police des liens de navigation*/
+a{
+    font-size: 1.5em;
+    color: white;
+    font-family: Bahnschrift, Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+
+/*lorsqu'on survol les textes de navigation ceux-ci deviennent legerement plus gros et changent de couleur*/
+a:hover{
+    color: rgb(123, 191, 255);
+    transform: scale(1.2, 1.2);
+    text-shadow: px 1px 2px rgb(102, 255, 0);
+}
+
+/************************************************************************/
+/************************************************************************/
+/*style section acceuill acceuil*/
+
+/*Modification du flex de la section et taille qui fera toute la page et des couleur et fond de textes pour les enfants de la section*/
+#acceuil{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    font-family: Bahnschrift, Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+#acceuil h1{
+    font-size: 2.5em;
+    margin: 10px auto;
+}
+
+#acceuil p{
+    margin: 10px auto 0 auto;
+    font-size: 1.5em;
+}
+
+/************************************************************************/
+/************************************************************************/
+/*Cr/ation des classes pour les paragraphes de contenu qui aura le meme style*/
+
+/*Modification du flex de la section et taille qui fera toute la page et des couleur et fond de textes pour les enfants de la section*/
+.styleSection{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    font-family: Bahnschrift, Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+/*changement du view height de la section Street fighter comme elle a plus de contenu*/
+#streetFighter{
+    height: 140vh;
+}
+
+/*la div qui contient la div du text et l'image sera en flex row pour que les deux soient un à de l'autre*/
+.styleSectionDivSecond{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-content: center;
+    margin: 0 auto;
+}
+
+.styleSectionH1{
+    font-size: 3em;
+    margin: 10px auto 20px auto;
+}
+
+/*la div qui contient le text sera elle en flex column pour que les paragraphes et les titres soient les uns par dessus les autres*/
+.sectionConteneurTexte{
+    position: relative;
+    margin-top: 0;
+    width: 40%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+/*on réduit la taille de l'image*/
+.sectionImg{
+    width: 50%;
+}
+
+/*modifocation su style du texte de la section des section suivantes :*/
+#tekken p, #streetFighter p, #introduction p, #video p{
+    font-size: 1.1em;
+    margin: 0 auto 10px auto;
+    text-indent: 20px;
+}
+
+/*style de la section qui contient les vidéos*/
+#video{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 50px;
+}
+
+/*modification des div qui contiennent les vidéos et les paragraphes de texte*/
+#video div{
+    width: 90%;
+    height: 45%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    position: relative;
+    top: 20px;
+}
+
+/*Met les paragraphes des sections qui contiennent les vidéos en dlex column */
+#video #texteVideo{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 50%;
+}
+
+
+/*modification de quelques propriete de la section imagesTekken et imagesStreetFighter. celle-ci aura 3 div qui serons en collones*/
+#imagesTekken, #imagesStreetFighter{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/*toutes les images de la gallery d'images auron la meme largeur et auron aussi une effet avec transition pour le box shadow box shadow*/
+#imagesTekken img, #imagesStreetFighter img{
+    width: 100%;
+    filter: grayscale(100%);
+    transition: filter 0.5s;
+    box-shadow: 0 0 0 0 rgb(0, 132, 255);
+}
+
+/*proprietes de l'images changent avec une transition lorsque le curseur est dessus*/
+#imagesTekken img:hover, #imagesStreetFighter img:hover{
+    filter: grayscale(0%);
+    transition: filter 0.5s;
+    box-shadow: 0 0 50px 10px rgb(0, 132, 255);
+}
+
+/*les dives en colonnes auron un flex en row pour les images*/
+#imagesTekken div, #imagesStreetFighter div{
+    width: 80%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: center;
+}
+
+/*met la taille initial des balises figures a 20%*/
+#imagesTekken figure, #imagesStreetFighter figure{
+    width: 20%;
+    padding: 0;
+    margin: 0;
+    height: fit-content;
+    transition: background-color 1s;
+    transition: scale 0.5s;
+}
+
+/*lorsque le cursor est sur l'image on change la taille et applique un z index de 2 pour que si l'image qu'on se superpose a un autre et soit par dessus*/
+#imagesTekken figure:hover, #imagesStreetFighter figure:hover{
+    scale: 275%;
+    z-index: 2;
+    transition: background-color 1s;
+    transition: scale 0.5s;
+}
+
+#tableauJeuxProfits{
+    padding-top: 100px;
+}
+
+/*Centre le titre du tableau*/
+#tableauJeuxProfits h1{
+    text-align: center;
+}
+
+/*change le style du tableau*/
+table{
+    background-color: rgba(2, 102, 196, 0.705);
+    width: 80vw;
+    margin: 0 auto;
+    border: 2px solid white;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+/*ajoute des bordures intérieurs au tableau*/
+th, td{
+    border: 2px solid white;
+}
+
+/*Lorsque le curseur est sur une ligne du tableau celle-ci change de couleur*/
+tr:hover{
+    background-color: brown;
+}
+
+/*augmentation de la taille de la section formulaire*/
+#formulaire{
+    height: 130vh;
+}
+
+form{
+    width: 50%;
+}
+
+form p{
+    font-family: Bahnschrift, Arial, Helvetica, sans-serif;
+}
+
+fieldset{
+    background-color: rgba(155, 15, 15, 0.637);
+}
+
+/*on pousse les input du formulaires un peu à droite pour le style*/
+form input{
+    margin-left:50px;
+}
+
+/*annule la marge de certains elements du formulairea*/
+#email, #autreJeu, #btnSoumettre{
+    margin-left: 0;
+}
+
+/*couleur d'arrie-plan pour le footer et taille du footer*/
+footer{
+    background-color: rgba(0, 0, 0, 0.733);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+}
+
+footer a{
+    font-size: 1em;
+}
+
+footer div{
+    width: 80%;
+    text-align: center;
+}
+
+/*flex row pour la div qui contient les icones*/
+#iconesReseaux{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/*met les icones plus grandes et de couleurs blanche pour bien les voir*/
+ion-icon{
+    color: white;
+    font-size: 60px;
+}
